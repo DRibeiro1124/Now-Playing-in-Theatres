@@ -10,12 +10,14 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <NavBar />
-      <section className="App-component">
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-        </Switch>
-      </section>
+        <section>
+          <NavBar />
+          <section className="App-component">
+            <Switch>
+              <Route path="/" exact component={HomePage} />
+            </Switch>
+          </section>
+        </section>
       </Router>
     );
   }
