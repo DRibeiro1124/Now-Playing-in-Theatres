@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import './App.css';
+
 import HomePage from './Components/HomePage';
 import NavBar from './Components/NavBar'
 
@@ -32,7 +33,7 @@ class App extends Component {
           <NavBar />
           <section className="App-component">
             <Switch>
-              <Route path="/" exact component={HomePage} />
+              <Route path="/" exact component={() => <HomePage movies={this.state.movies}/>} />
             </Switch>
           </section>
         </section>
