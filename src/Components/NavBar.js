@@ -6,8 +6,8 @@ class NavBar extends Component {
         return (
             <div className="search-container">
                 <section>
-                    <input type="text" placeholder="Search.." name="search" /> 
-                    <button>Submit</button>   
+                    <input type="text" placeholder="Search..." name="search" className="search-input" /> 
+                    <button className="search-button">Submit</button>   
                 </section>
                 <section className="nav-bar">
                     <span>Home</span>

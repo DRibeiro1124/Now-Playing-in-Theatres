@@ -12,18 +12,23 @@
     justify-content: space-between;
     align-items: center;
     background: #8AA2A9;
+    font-family: 'Righteous', cursive;
 }
 
-
+.search-input {
+    border-radius: .5em;
+    margin-left: 2em;
+    font-family: 'Righteous', cursive;
+}
 
 .search-button {
     border: 1px solid black;
-    height: 8px;
-    border-radius: 4px;
+    height: 50%;
+    border-radius: .5em;
+    margin-left: .5em;
     font-family: 'Righteous', cursive;
 }
 
 .nav-bar span {
     margin-right: 2em;
-    font-family: 'Righteous', cursive;
 }
