@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MovieDetails from './MovieDetails'
+import IndividualMovie from './IndividualMovie'
 
 class MovieList extends Component {
     render() {
@@ -7,7 +7,7 @@ class MovieList extends Component {
             <section className="movies">
                 {this.props.movies.map((movie, i) => {
                     return (
-                        <MovieDetails key={i} movie={movie}/>
+                        <IndividualMovie key={i} movie={movie}/>
                     )
                 })}
             </section>

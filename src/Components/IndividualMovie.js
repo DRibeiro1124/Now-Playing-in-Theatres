@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
 
-class MovieDetails extends Component {
+class IndividualMovie extends Component {
     render() {
         return (
             <section className="movie">
@@ -13,4 +13,4 @@ class MovieDetails extends Component {
     }
 }
 
-export default MovieDetails;
+export default IndividualMovie;
