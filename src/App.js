@@ -17,20 +17,14 @@ class App extends Component {
     }
   }
 
-  generateRandomNumber = () => {
-    const random = Math.floor(Math.random() * 20)
-    return random
-  }
-
   componentDidMount() {
     fetch(`${BASE_URL}?api_key=${API_KEY}&language=en-US&page=1`)
       .then(resp => resp.json())
       .then(movieData => {
-        console.log(movieData.results)
-        let _randomNumber = this.generateRandomNumber()
+        const random = Math.floor(Math.random() * 20)
         this.setState({
           movies: movieData.results,
-          randomNumber: _randomNumber
+          randomNumber: random
         })
       })
   }
