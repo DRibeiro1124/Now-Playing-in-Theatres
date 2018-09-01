@@ -12,16 +12,25 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: []
+      movies: [],
+      randomNumber: 0
     }
+  }
+
+  generateRandomNumber = () => {
+    const random = Math.floor(Math.random() * 20)
+    return random
   }
 
   componentDidMount() {
     fetch(`${BASE_URL}?api_key=${API_KEY}&language=en-US&page=1`)
       .then(resp => resp.json())
       .then(movieData => {
+        console.log(movieData.results)
+        let _randomNumber = this.generateRandomNumber()
         this.setState({
-          movies: movieData.results
+          movies: movieData.results,
+          randomNumber: _randomNumber
         })
       })
   }
@@ -33,7 +42,7 @@ class App extends Component {
           <NavBar />
           <section className="App-component">
             <Switch>
-              <Route path="/" exact component={() => <HomePage movies={this.state.movies}/>} />
+              <Route path="/" exact component={() => <HomePage movies={this.state.movies} randomNumber={this.state.randomNumber} />} />
             </Switch>
           </section>
         </section>
