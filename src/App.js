@@ -4,6 +4,7 @@ import './App.css';
 
 import HomePage from './Components/HomePage';
 import NavBar from './Components/NavBar'
+import MovieDetails from './Components/MovieDetails'
 
 const API_KEY = '39df1c4c7a287510f53854893ba3d788'
 const BASE_URL = 'https://api.themoviedb.org/3/movie/now_playing'
@@ -37,6 +38,7 @@ class App extends Component {
           <section className="App-component">
             <Switch>
               <Route path="/" exact component={() => <HomePage movies={this.state.movies} randomNumber={this.state.randomNumber} />} />
+              <Route path="/Movie/:movieId" exact component={MovieDetails} />
             </Switch>
           </section>
         </section>
