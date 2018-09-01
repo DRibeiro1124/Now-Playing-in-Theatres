@@ -5,7 +5,7 @@ import MovieList from './MovieList'
 class HomePage extends Component {
     render() {
         return (
-            <div>
+            <div className="home-page">
                 <FeaturedMovie movies={this.props.movies}/>
                 <MovieList movies={this.props.movies}/>
             </div>

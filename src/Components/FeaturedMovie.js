@@ -4,7 +4,6 @@ class FeaturedMovie extends Component {
     render() {
         return (
             <div>
-                Featured Movie.
             </div>
         );
     }

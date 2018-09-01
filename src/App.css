@@ -32,3 +32,24 @@
 .nav-bar span {
     margin-right: 2em;
 }
+
+.home-page {
+    padding: 3em;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+}
+
+.movie img {
+    border-radius: .5em;
+}
