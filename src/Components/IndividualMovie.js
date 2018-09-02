@@ -9,6 +9,7 @@ class IndividualMovie extends Component {
             <section className="movie">
                 <section className="movie-title">{this.props.movie.title}</section>
                 <img src={`${IMAGE_BASE_URL}${this.props.movie.poster_path}`} alt={`${this.props.movie.title}`} width={image_width}/>
+                <button className="favorite-button">Add to Favorites</button>
             </section>
         );
     }
