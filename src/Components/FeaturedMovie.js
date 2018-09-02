@@ -13,16 +13,18 @@ class FeaturedMovie extends Component {
                     <section className="center">
                         Featured Movie of the Week!
                     </section>
-                    <Link 
-                    className="movie-link"
-                    to={{
-                        pathname: `/Movie/${randomMovieIndex}`,
-                        state: {
-                            movies: this.props.movies
-                        }
-                    }}>
-                        <IndividualMovie movie={randomMovie} imageWidth={150}/>
-                    </Link>
+                    <section className="movie-container">
+                        <Link 
+                        className="movie-link"
+                        to={{
+                            pathname: `/Movie/${randomMovieIndex}`,
+                            state: {
+                                movies: this.props.movies
+                            }
+                        }}>
+                            <IndividualMovie movie={randomMovie} imageWidth={150}/>
+                        </Link>
+                    </section>
                 </section>
             );
         }

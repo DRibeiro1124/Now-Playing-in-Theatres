@@ -10,17 +10,19 @@ class MovieList extends Component {
                 <section className="movies">
                     {this.props.movies.map((movie, i) => {
                         return (
-                            <Link 
-                            className="movie-link"
-                            to={{
-                                pathname: `/Movie/${i}`,
-                                state: {
-                                    movies: this.props.movies
-                                }
-                            }} 
-                            key={i}>
-                                <IndividualMovie key={i} movie={movie} imageWidth={250}/>
-                            </Link>
+                            <section className="movie-container">
+                                <Link 
+                                className="movie-link"
+                                to={{
+                                    pathname: `/Movie/${i}`,
+                                    state: {
+                                        movies: this.props.movies
+                                    }
+                                }} 
+                                key={i}>
+                                    <IndividualMovie key={i} movie={movie} imageWidth={250}/>
+                                </Link>
+                            </section>
                         )
                     })}
                 </section>

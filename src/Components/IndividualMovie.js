@@ -7,15 +7,13 @@ class IndividualMovie extends Component {
         const image_width = this.props.imageWidth
         let movie = this.props.movie
         return (
-            <section className="movie-container">
-                <section className="movie">
-                    <section className="movie-title">{movie.title}</section>
-                    <img 
-                    src={IMAGE_BASE_URL + movie.poster_path} 
-                    alt={movie.title} 
-                    width={image_width}
-                    />
-                </section>
+            <section className="movie">
+                <section className="movie-title">{movie.title}</section>
+                <img 
+                src={IMAGE_BASE_URL + movie.poster_path} 
+                alt={movie.title} 
+                width={image_width}
+                />
             </section>
         );
     }
