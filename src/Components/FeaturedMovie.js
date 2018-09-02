@@ -4,18 +4,19 @@ const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
 
 class FeaturedMovie extends Component {
     render() {
-        console.log(this.props.movies)
-        console.log(this.props.randomNumber)
         if (this.props.movies && this.props.randomNumber) {
+            let movies = this.props.movies
+            let randomMovieIndex = this.props.randomNumber
+            let randomMovie = movies[randomMovieIndex]
             return (
                 <section className="movie">
-                    <span>Featured Movie of the Week!</span>
+                    <section>Featured Movie of the Week!</section>
                     <section className="movie-title">
-                        {this.props.movies[this.props.randomNumber].title}
+                        {randomMovie.title}
                     </section>
                     <img 
-                    src={`${IMAGE_BASE_URL}${this.props.movies[this.props.randomNumber].poster_path}`} 
-                    alt={`${this.props.movies[this.props.randomNumber].title}`} 
+                    src={IMAGE_BASE_URL + randomMovie.poster_path} 
+                    alt={randomMovie.title} 
                     width="150"
                     />
                 </section>

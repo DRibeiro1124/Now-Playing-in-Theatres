@@ -22,7 +22,7 @@ class App extends Component {
     fetch(`${BASE_URL}?api_key=${API_KEY}&language=en-US&page=1`)
       .then(resp => resp.json())
       .then(movieData => {
-        const random = Math.floor(Math.random() * 20)
+        const random = Math.floor(Math.random() * movieData.results.length)
         this.setState({
           movies: movieData.results,
           randomNumber: random

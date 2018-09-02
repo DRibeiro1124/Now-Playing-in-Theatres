@@ -6,13 +6,18 @@ class MovieList extends Component {
     render() {
         return (
             <section className="movies-container">
-                <section className="movies-container-title">
-                    Now Playing:
-                </section>
+                <section className="movies-container-title">Now Playing:</section>
                 <section className="movies">
                     {this.props.movies.map((movie, i) => {
                         return (
-                            <Link to={`/Movie/${i}`}>
+                            <Link 
+                            to={{
+                                pathname: `/Movie/${i}`,
+                                state: {
+                                    movies: this.props.movies
+                                }
+                            }} 
+                            key={i}>
                                 <IndividualMovie key={i} movie={movie} />
                             </Link>
                         )
