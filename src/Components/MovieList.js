@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import IndividualMovie from './IndividualMovie'
+import MovieItem from './MovieItem'
 
 class MovieList extends Component {
     render() {
@@ -20,7 +20,7 @@ class MovieList extends Component {
                                     }
                                 }} 
                                 key={i}>
-                                    <IndividualMovie key={i} movie={movie} imageWidth={250}/>
+                                    <MovieItem key={i} movie={movie} imageWidth={250}/>
                                 </Link>
                             </section>
                         )
