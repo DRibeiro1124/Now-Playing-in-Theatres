@@ -66,6 +66,11 @@
     margin: 2em;
 }
 
+.movie-link {
+    text-decoration: none;
+    color: black;
+}
+
 .center {
     text-align: center;
 }

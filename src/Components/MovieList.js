@@ -11,6 +11,7 @@ class MovieList extends Component {
                     {this.props.movies.map((movie, i) => {
                         return (
                             <Link 
+                            className="movie-link"
                             to={{
                                 pathname: `/Movie/${i}`,
                                 state: {

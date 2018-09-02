@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import IndividualMovie from './IndividualMovie'
 
 class FeaturedMovie extends Component {
@@ -12,7 +13,16 @@ class FeaturedMovie extends Component {
                     <section className="center">
                         Featured Movie of the Week!
                     </section>
-                    <IndividualMovie movie={randomMovie} imageWidth={150} />
+                    <Link 
+                    className="movie-link"
+                    to={{
+                        pathname: `/Movie/${randomMovieIndex}`,
+                        state: {
+                            movies: this.props.movies
+                        }
+                    }}>
+                        <IndividualMovie movie={randomMovie} imageWidth={150}/>
+                    </Link>
                 </section>
             );
         }
