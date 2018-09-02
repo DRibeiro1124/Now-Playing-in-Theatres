@@ -9,7 +9,7 @@ class FeaturedMovie extends Component {
         if (this.props.movies && this.props.randomNumber) {
             return (
                 <section className="movie">
-                    <span>Featured Movie of the Week!</span>
+                    <span className="featured-intro">Featured Movie of the Week!</span>
                     <section className="movie-title">
                         {this.props.movies[this.props.randomNumber].title}
                     </section>

@@ -6,7 +6,7 @@ class MovieList extends Component {
     render() {
         return (
             <section className="movies-container">
-                <section className="movies-container-title">
+                <section className="intro-display">
                     Now Playing:
                 </section>
                 <section className="movies">
