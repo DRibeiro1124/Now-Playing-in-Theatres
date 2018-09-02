@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
+import IndividualMovie from './IndividualMovie'
 
 class FeaturedMovie extends Component {
     render() {
@@ -9,16 +8,11 @@ class FeaturedMovie extends Component {
             let randomMovieIndex = this.props.randomNumber
             let randomMovie = movies[randomMovieIndex]
             return (
-                <section className="movie">
-                    <section>Featured Movie of the Week!</section>
-                    <section className="movie-title">
-                        {randomMovie.title}
+                <section>
+                    <section className="center">
+                        Featured Movie of the Week!
                     </section>
-                    <img 
-                    src={IMAGE_BASE_URL + randomMovie.poster_path} 
-                    alt={randomMovie.title} 
-                    width="150"
-                    />
+                    <IndividualMovie movie={randomMovie} imageWidth={150} />
                 </section>
             );
         }

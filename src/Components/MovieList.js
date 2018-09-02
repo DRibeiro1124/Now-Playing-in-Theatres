@@ -18,7 +18,7 @@ class MovieList extends Component {
                                 }
                             }} 
                             key={i}>
-                                <IndividualMovie key={i} movie={movie} />
+                                <IndividualMovie key={i} movie={movie} imageWidth={250}/>
                             </Link>
                         )
                     })}
