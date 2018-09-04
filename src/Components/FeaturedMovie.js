@@ -1,24 +1,30 @@
 import React, { Component } from 'react';
-
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
+import { Link } from 'react-router-dom'
+import MovieItem from './MovieItem'
 
 class FeaturedMovie extends Component {
     render() {
-        console.log(this.props.movies)
-        console.log(this.props.randomNumber)
         if (this.props.movies && this.props.randomNumber) {
+            let movies = this.props.movies
+            let randomMovieIndex = this.props.randomNumber
+            let randomMovie = movies[randomMovieIndex]
             return (
-                <section className="movie">
-                    <span className="featured-intro">Featured Movie of the Week!</span>
-                    <section className="movie-title">
-                        {this.props.movies[this.props.randomNumber].title}
+                <section>
+                    <section className="center">
+                        Featured Movie of the Week!
                     </section>
-                    <img 
-                    src={`${IMAGE_BASE_URL}${this.props.movies[this.props.randomNumber].poster_path}`} 
-                    alt={`${this.props.movies[this.props.randomNumber].title}`} 
-                    width="150"
-                    />
-                    <button className="favorite-button">Add to Favorites</button>
+                    <section className="movie-container">
+                        <Link 
+                        className="movie-link"
+                        to={{
+                            pathname: `/Movie/${randomMovieIndex}`,
+                            state: {
+                                movies: this.props.movies
+                            }
+                        }}>
+                            <MovieItem movie={randomMovie} imageWidth={150}/>
+                        </Link>
+                    </section>
                 </section>
             );
         }
