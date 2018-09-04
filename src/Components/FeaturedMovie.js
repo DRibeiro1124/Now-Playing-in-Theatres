@@ -18,6 +18,7 @@ class FeaturedMovie extends Component {
                     alt={`${this.props.movies[this.props.randomNumber].title}`} 
                     width="150"
                     />
+                    <button className="favorite-button">Add to Favorites</button>
                 </section>
             );
         }
